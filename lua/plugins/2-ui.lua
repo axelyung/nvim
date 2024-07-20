@@ -2,6 +2,7 @@
 -- Things that make the GUI better.
 
 --    Sections:
+--       -> nord                        [theme]
 --       -> tokyonight                  [theme]
 --       -> astrotheme                  [theme]
 --       -> alpha-nvim                  [greeter]
@@ -26,6 +27,20 @@ local is_windows = vim.fn.has('win32') == 1         -- true if on windows
 local is_android = vim.fn.isdirectory('/data') == 1 -- true if on android
 
 return {
+
+  -- nord [theme]
+  -- https://github.com/nordtheme/vim
+  {
+    "nordtheme/vim",
+    event = "User LoadColorSchemes",
+    opts = {
+      dim_inactive = false,
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = true },
+      },
+    }
+  },
 
   -- tokyonight [theme]
   -- https://github.com/folke/tokyonight.nvim
