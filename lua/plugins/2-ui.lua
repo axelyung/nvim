@@ -2,7 +2,7 @@
 -- Things that make the GUI better.
 
 --    Sections:
---       -> nord                        [theme]
+--       -> nord
 --       -> tokyonight                  [theme]
 --       -> astrotheme                  [theme]
 --       -> alpha-nvim                  [greeter]
@@ -27,7 +27,6 @@ local is_windows = vim.fn.has('win32') == 1         -- true if on windows
 local is_android = vim.fn.isdirectory('/data') == 1 -- true if on android
 
 return {
-
   -- nord [theme]
   -- https://github.com/nordtheme/vim
   {
@@ -44,28 +43,28 @@ return {
 
   -- tokyonight [theme]
   -- https://github.com/folke/tokyonight.nvim
-  {
-    "folke/tokyonight.nvim",
-    event = "User LoadColorSchemes",
-    opts = {
-      dim_inactive = false,
-      styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-      },
-    }
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   event = "User LoadColorSchemes",
+  --   opts = {
+  --     dim_inactive = false,
+  --     styles = {
+  --       comments = { italic = true },
+  --       keywords = { italic = true },
+  --     },
+  --   }
+  -- },
 
   --  astrotheme [theme]
   --  https://github.com/AstroNvim/astrotheme
-  {
-    "AstroNvim/astrotheme",
-    event = "User LoadColorSchemes",
-    opts = {
-      palette = "astrodark",
-      plugins = { ["dashboard-nvim"] = true },
-    },
-  },
+  -- {
+  --   "AstroNvim/astrotheme",
+  --   event = "User LoadColorSchemes",
+  --   opts = {
+  --     palette = "astrodark",
+  --     plugins = { ["dashboard-nvim"] = true },
+  --   },
+  -- },
 
   --  alpha-nvim [greeter]
   --  https://github.com/goolord/alpha-nvim
